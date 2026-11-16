@@ -1,0 +1,11 @@
+canvas {
+  background-color: rgb(177, 226, 235);
+  border: 10px solid black;
+  border-color: rgb(79, 146, 124);
+  cursor: crosshair;
+  margin-top: 2%;
+}
+
+.drawing-body{
+  margin-left: 4%;
+}
