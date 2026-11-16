@@ -8,6 +8,7 @@ const app = express(); //create an express {node server}
 app.use(cors()); //telling our server to allow cross-origin requests
 const server = createServer(app);
 const io = new Server(server, { cors: {origin: '*'}}); //creates socket connection
+const PORT = process.env.PORT || 3000;
 
 
 //listening event for when someone else draws on our canvas
@@ -37,6 +38,6 @@ io.on("connection", (socket) => {
 });
 
 //tell our server to listen to our localhost:3000
-server.listen(3000, () => {
-    console.log("Server running on http://localhost:3000")
+server.listen(PORT, () => {
+  console.log(`Server running on ${PORT}`);
 });
